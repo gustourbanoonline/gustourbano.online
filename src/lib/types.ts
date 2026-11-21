@@ -1,3 +1,4 @@
+
 export type Product = {
   id: string;
   name: string;
@@ -8,8 +9,19 @@ export type Product = {
   active: boolean;
 };
 
-export type Zone = { id: string; name: string; fee: number; active: boolean };
-export type CartLine = { product: Product; quantity: number; note: string };
+export type Zone = {
+  id: string;
+  name: string;
+  fee: number;
+  active: boolean;
+};
+
+export type CartLine = {
+  product: Product;
+  quantity: number;
+  note: string;
+};
+
 export type Order = {
   id: string;
   order_number: number;
@@ -18,10 +30,16 @@ export type Order = {
   address: string;
   neighborhood: string;
   notes: string;
-  items: { name: string; quantity: number; price: number; note?: string }[];
+  items: {
+    name: string;
+    quantity: number;
+    price: number;
+    note?: string;
+  }[];
   subtotal: number;
   delivery_fee: number;
   total: number;
+  payment_method: string;
   payment_status: string;
   payment_proof: string;
   status: string;
